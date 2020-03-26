@@ -23,6 +23,6 @@ jobs:
       - name: Deploy to Firebase
         uses: w9jds/firebase-action@master
         with:
-          args: deploy --only hosting --project iryou-management-17
+          args: deploy --only hosting --project jhm2020tottori
         env:
           FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
