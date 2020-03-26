@@ -13,7 +13,6 @@ jobs:
         uses: actions/checkout@master
       - name: Install Dependencies
         run: npm install
-          path: public
   deploy:
     name: Deploy
     needs: build
