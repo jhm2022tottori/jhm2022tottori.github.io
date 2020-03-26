@@ -1,10 +1,44 @@
 {
-  "hosting": {
-    "public": "public",
-    "ignore": [
-      "firebase.json",
-      "**/.*",
-      "**/node_modules/**"
-    ]
-  }
+	"hosting": {
+		"site": "jhm2020tottori",
+		"public": "public",
+		"ignore": [
+			"firebase.json",
+			"**/.*",
+			"**/node_modules/**"
+		],
+		"cleanUrls": true,
+		"headers": [ {
+		  "source" : "**/*.@(jpg|jpeg|gif|png)",
+		"headers" : [ {
+		  "key" : "Cache-Control",
+		  "value" : "max-age=7776000,public"
+		} ]
+	  },
+	  {
+		"source" : "**/*.@(webp|woff2|js|css)",
+	  "headers" : [ {
+		"key" : "Cache-Control",
+		"value" : "max-age=31536000,public"
+	  } ]
+	},
+	{
+	  "source" : "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+	  "headers" : [ {
+		"key" : "Access-Control-Allow-Origin",
+		"value" : "*"
+	  }
+	]
+	}
+	,
+	  {
+		"source" : "**/*.@(eot|otf|ttf|ttc|woff|woff2|font.css)",
+		"headers" : [ {
+		  "key" : "Access-Control-Allow-Headers",
+		  "value" : "Origin, X-Requested-With, Content-Type, Accept"
+		}
+	]
+	  }
+	]
+	}
 }
